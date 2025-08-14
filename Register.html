@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+        <title>HOTEL</title>
+        <script>
+            function validate()
+            {
+                if(document.form1.fname.value=="")
+                {
+                    window.alert("Please Enter First Name");
+                    document.form1.fname.focus();
+                    return false;
+                }
+                if(document.form1.lname.value=="")
+                {
+                    window.alert("Please Enter Last Name");
+                    document.form1.lname.focus();
+                    return false;
+                }
+                if(document.form1.password.value=="")
+                {
+                    window.alert("Password Can Not be Blank");
+                    document.form1.password.focus();
+                    return false;
+                }
+                if(document.form1.add.value=="")
+                {
+                    window.alert("Please Enter your Address");
+                    document.form1.add.focus();
+                    return false;
+                }
+              if((document.getElementById("male").checked==false) && (document.getElementById("female").checked==false))
+               {
+                    window.alert("Select Gender!");
+                    return false;
+               }
+               
+        
+                return true;
+        
+            }
+        </script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-item {
+                font-size: 1.5rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .nav-link {
+                color: rgb(97, 49, 49);
+            }
+            .nav-link:hover {
+                transform: scale(1.1);
+                color: rgb(255, 69, 0);
+                text-decoration: none;
+            }
+            .navbar {
+                position: relative;
+                width: 100%;
+                z-index: 100;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            .logo {
+                max-height: 50px;
+                margin-left: 20px;
+            }
+            .logo1 {
+                color: rgb(97, 49, 49);
+                margin-left: 20px;
+                white-space: nowrap;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 100px;
+                height: 100vh;
+            }
+            .card {
+                background: white;
+                color: black;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                width: 100%;
+            }
+            .feedback-text {
+                color: rgb(97, 49, 49);
+                font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .feedback-form {
+                background: white;
+                padding: 20px;
+            }
+            .form-text {
+                font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+                color: rgb(97, 49, 49);
+                font-weight: bolder;
+            }
+            .form-control {
+                width: 100%;
+            }
+            .fa 
+		{
+			padding: 20px;
+			font-size: 30px;
+			width: 50px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.fa:hover 
+		{
+			opacity: 0.7;
+		}
+		.fa-facebook 
+		{
+			background: #3B5998;
+			color: white;
+			height:25px;
+		}
+
+		.fa-twitter 
+		{
+			background: #55ACEE;
+			color: white;
+			height:25px;
+		}
+         
+		.fa-instagram 
+		{
+			background: #3B5998;
+			color: white;
+			height:25px;
+		} 
+		 
+		.footer
+		{
+			width:100%;
+			height:220px;
+			text-align:center;
+			text-transform:uppercase;
+			padding-top:30px;
+			background:#272727;
+			color:#fff;
+		}
+	
+		.footer li
+		{
+			list-style:none;
+			display:inline-block;
+			margin:10px;
+        }
+	
+		.footer-icons a
+		{
+			background:#e7e8e6;
+			color:#272727;
+			padding:15px;
+			border-radius:100px;
+			display:flex;
+			font-size:25px;
+			color:#fff;
+	    }
+	
+		.footer-icons a:hover
+		{
+			color:#fff;
+		}
+	
+		.footer-menu a
+		{
+			color:#fff;
+		}
+	
+		.footer-menu a:hover
+		{
+			color:#eef2ec;
+		}
+
+        .footer-icons img {
+          width: 25px; 
+          height: 25px; 
+          object-fit: contain;
+          transition: transform 0.3s ease-in-out;
+       }
+
+          .footer-icons a:hover img {
+           transform: scale(1.1); 
+
+           }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="images/balanced-diet.png" class="logo">
+            <h3 class="logo1">KHAO-PIO</h3>
+            <ul class="nav justify-content-end w-100">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Menu.html">Kitchen</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="Aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="col-md-6">
+                <h2 class="feedback-text">Registration</h2>
+                <div class="feedback-form border rounded">
+                    <form action="#" method="post" name="form1">
+                        <div class="form-group">
+                            <label class="form-text">First Name</label>
+                            <input type="text" placeholder="Enter your first name" name="fname" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-text">Last Name</label>
+                            <input type="text" placeholder="Enter your last name" name="lname" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-text">Address</label>
+                            <input type="text" placeholder="Enter your Address" name="add" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-text">Select Your Gender</label><br>
+                            <input type="radio" id="male" name="gender" value="male" required> Male
+                            <input type="radio" id="female" name="gender" value="female" required> Female
+                        </div>
+                        <div class="form-group">
+                            <label class="form-text">Email</label>
+                            <input type="email" placeholder="Enter your Email" name="cemail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-text">Password</label>
+                            <input type="password" placeholder="Enter your Password" name="password" class="form-control" required>
+                        </div>
+                        <div class="text-center">
+                           <a src="Order.html"> <button type="submit" class="btn btn-danger btn-lg">Submit</button></a>
+                            <button type="reset" class="btn btn-secondary btn-lg">Reset</button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-3">Have an account? <a href="Login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <ul class="footer-icons">
+                <li><a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com"><img src="images/twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a></li>
+            </ul>
+            <ul class="footer-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <p>Copyright @2030 All rights reserved by Jadhav Sayali</p>
+        </footer>
+    </body>
+</html>

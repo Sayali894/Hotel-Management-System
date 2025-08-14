@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>HOTEL</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-item {
+                font-size: 1.5rem; 
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .nav-link {
+                color: rgb(97, 49, 49); 
+            }
+            .nav-link {
+                background-color: darkbrown;
+                  
+            }
+            .nav-link:hover {
+                transform: scale(1.1); 
+                color: rgb(255, 69, 0); 
+                text-decoration: none; 
+                
+            }
+          
+            .navbar {
+                position: relative;
+                
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                margin: 0;
+                padding: 0;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                transform: perspective(500px);
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .logo {
+            max-height: 50px; 
+            max-width: auto;
+            margin-left: 20px; 
+              }
+              .logo1 {
+            color: rgb(97, 49, 49); 
+            max-width: auto;
+            margin-left: 20px; 
+            white-space: nowrap;
+              }
+              
+              .menu-item{
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 50;
+                margin: 0;
+                padding: 0;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: rgb(97, 49, 49);
+                overflow: hidden;
+                padding-top: 35px;
+              }
+
+              .menu img
+              {
+               border-radius: 50%;
+               height: 130px;
+               width: 130px;
+               margin-left: 60px;
+               object-fit: cover; 
+              }
+
+              .menu{
+                display: inline-block;
+                margin: 20px;
+                text-align: center;
+            }
+              
+              .menu p{
+               font-size: large;
+               text-align: center;
+               margin-left: 35px;
+               
+              }
+
+              .menu1{
+                  display:flex; 
+                  overflow: auto;
+                  white-space: nowrap;
+                  padding: 20px 0;        
+              }
+
+              .menu1::-webkit-scrollbar{
+                overflow: hidden;
+              }
+              
+               .menu-color
+               {
+                color: rgb(97, 49, 49);
+               }
+
+               .menu-color:hover{
+                color:rgb(97, 49, 49);
+               }
+
+              .special {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+                color: rgb(97, 49, 49);
+}
+
+.special-item {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    padding: 20px;
+    padding-left: 30%;
+    padding-right: 25%;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 50%;
+    min-width: 100%;
+}
+
+.special-item::-webkit-scrollbar {
+    height: 8px;
+}
+
+       .special-item::-webkit-scrollbar-thumb {
+        background: rgba(97, 49, 49, 0.7);
+        border-radius: 10px;
+        }
+
+        .special-item img {
+         height: 130px;
+         width: 195px;
+         object-fit: cover;
+         border-radius: 10px;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         transform: perspective(500px) rotateY(10deg);
+         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+         }
+
+         .special-item img:hover {
+          transform: perspective(500px) rotateY(0deg) scale(1.1);
+           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+          }
+
+
+            .fa 
+		{
+			padding: 20px;
+			font-size: 30px;
+			width: 50px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.fa:hover 
+		{
+			opacity: 0.7;
+		}
+		.fa-facebook 
+		{
+			background: #3B5998;
+			color: white;
+			height:25px;
+		}
+
+		.fa-twitter 
+		{
+			background: #55ACEE;
+			color: white;
+			height:25px;
+		}
+         
+		.fa-instagram 
+		{
+			background: #3B5998;
+			color: white;
+			height:25px;
+		} 
+		 
+		
+		.footer
+		{
+			width:100%;
+			height:220px;
+			text-align:center;
+			text-transform:uppercase;
+			padding-top:30px;
+			background:#272727;
+			color:#fff;
+		}
+	
+		.footer li
+		{
+			list-style:none;
+			display:inline-block;
+			margin:10px;
+        }
+	
+		.footer-icons a
+		{
+			background:#e7e8e6;
+			color:#272727;
+			padding:15px;
+			border-radius:100px;
+			display:flex;
+			font-size:25px;
+			color:#fff;
+	    }
+	
+		.footer-icons a:hover
+		{
+			color:#fff;
+		}
+	
+		.footer-menu a
+		{
+			color:#fff;
+		}
+	
+		.footer-menu a:hover
+		{
+			color:#eef2ec;
+		}
+
+        .footer-icons img {
+          width: 25px; 
+          height: 25px; 
+          object-fit: contain;
+          transition: transform 0.3s ease-in-out;
+       }
+
+          .footer-icons a:hover img {
+           transform: scale(1.1); 
+           }
+           
+           
+          
+
+        </style>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="images/balanced-diet.png" class="logo">
+            <h3 class="logo1">KHAO-PIO</h3>
+            <ul class="nav justify-content-end w-100">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Menu.html">Kitchen</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Aboutus.html">About US</a>
+                </li>
+            </ul>
+        </nav>
+        <div class=" menu-item">
+        <center><h1>WHAT'S ON YOUR MIND ?</h1></center>
+        <div class="menu1">
+            <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/Pizza.png" >
+             <b><p>Pizza</p></b>
+            
+         </div>
+        </a>
+
+        <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/burger.avif" >
+             <b><p>Burger</p></b>
+         </div>
+        </a>
+
+        <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/paratha.jpeg" >
+             <b><p>Paratha</p></b>
+         </div>
+         </a>
+
+         <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/biryani.avif" >
+             <b><p>Biryani</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/noodle.avif" >
+             <b><p>Noodle</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/dosa.png" >
+             <b><p>Dosa</p></b>
+         </div>
+         </a>
+
+         <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/cake.avif" >
+             <b><p>Cake</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/vada pav.avif" >
+             <b><p>Vada Pav</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/mikeshake.avif" >
+             <b><p>MikeShake</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/veg thali.jpeg" >
+             <b><p>Veg Thali</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/pulav.png" >
+             <b><p>Pulav</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/panipuri.png" >
+             <b><p>Panipuri</p></b>
+         </div>
+          </a>
+           
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/sandwich.avif" >
+             <b><p>Sandwich</p></b>
+         </div>
+          </a>
+
+          <a href="Pizza.html" class="menu-color">
+         <div class="menu">
+            <img src="images/misal pav.avif" >
+             <b><p>Misal Pav</p></b>
+         </div>
+          </a>
+        </div>
+        </div>      
+        <div class="special">
+            <h1>TODAY'S SPECIAL MENU </h1>
+         <div class="special-item">
+            <div class="special-menu">
+                <img src="images/f19.jpg" >
+                 <b><p>Special Veg Thali</p></b>
+             </div>
+    
+             <div class="special-menu">
+                <img src="images/dessert.avif" >
+                 <b><p>Desserts</p></b>
+             </div>
+    
+             <div class="special-menu">
+                <img src="images/misal pav.avif" >
+                 <b><p>Misal Pav</p></b>
+             </div> 
+
+         </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              fetch("http://localhost:5000/menu")
+                .then((response) => response.json())
+                .then((data) => {
+                  const menuContainer = document.getElementById("menu-container");
+                  menuContainer.innerHTML = "";
+                  data.forEach((item, index) => {
+                    menuContainer.innerHTML += `
+                      <div class="card">
+                        <div class="card-body">
+                          <img src="${item.imageUrl}" style="width:27rem;height:35rem">
+                          <center><h3 class="menu-info">${item.name}</h3></center>
+                          <h4 class="menu-details">${item.description}</h4>
+                          <p class="card-text">Price: <span id="item-price-${index}">${item.price}</span> RS.</p>
+                          <div class="quantity-container">
+                            <label for="quantity-${index}" class="qt">Quantity:</label>
+                            <input type="number" id="quantity-${index}" class="form-control" value="1" min="1" onchange="updateTotal(${index})">
+                          </div>
+                          <p class="total-price">Total Price: <span id="total-${index}">${item.price}</span> RS</p>
+                          <center>
+                            <button type="button" class="btn btn-danger btn-lg" onclick="placeOrder(${index})">Order Now</button>
+                          </center>
+                        </div>
+                      </div>
+                    `;
+                  });
+                });
+            });
+            
+            function updateTotal(id) {
+              let price = parseInt(document.getElementById("item-price-" + id).innerText);
+              let quantity = parseInt(document.getElementById("quantity-" + id).value);
+              let total = price * quantity;
+              document.getElementById("total-" + id).innerText = total;
+            }
+            
+            function placeOrder(id) {
+              let quantity = document.getElementById("quantity-" + id).value;
+              let total = document.getElementById("total-" + id).innerText;
+              alert("Order placed successfully!\nQuantity: " + quantity + "\nTotal Price: " + total + " RS");
+            }
+            </script>
+            <div id="menu-container" class="card-deck"></div>
+            
+
+        <footer>
+            <section class="footer">
+                <ul class="footer-icons">
+                    <li><a href="https://www.facebook.com" class="fa"><img src="images/facebook (2).png" alt="Facebook"></a></li>
+                    <li><a href="https://www.twitter.com" class="fa"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="https://www.instagram.com" class="fa"><img src="images/instagram (1).png" alt="Instagram"></a></li>
+                </ul>
+                <ul class="footer-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="ab.html">About Us</a></li>
+                </ul>
+                <p class="statement">Copyright @2030 All rights reserved by Jadhav Sayali</p>
+            </section>
+        </footer>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
